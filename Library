@@ -679,7 +679,7 @@ function MacLib:Window(Settings)
 	dividerInteract.MouseButton1Down:Connect(function()
 		resizingContent = true
 		initialMouseX = UserInputService:GetMouseLocation().X
-		initialSidebarWidth = 165
+		initialSidebarWidth = 215
 	end)
 
 	UserInputService.InputEnded:Connect(function(input)
