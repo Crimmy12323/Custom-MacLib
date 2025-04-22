@@ -654,9 +654,8 @@ function MacLib:Window(Settings)
 	local defaultSidebarWidth = sidebar.AbsoluteSize.X
 	local initialMouseX, initialSidebarWidth
 	local snapRange = 20
-	local minSidebarWidth = 107
-	local maxSidebarWidth = 27
-
+	local minSidebarWidth = 96
+	local maxSidebarWidth = 96
 	local TweenSettings = {
 		DefaultTransparency = 0.9,
 		HoverTransparency = 0.85,
