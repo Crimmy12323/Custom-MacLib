@@ -651,11 +651,11 @@ function MacLib:Window(Settings)
 	content.Size = UDim2.new(0, (base.AbsoluteSize.X - sidebar.AbsoluteSize.X), 0.3, 0)
 
 	local resizingContent = false
-	local defaultSidebarWidth = sidebar.AbsoluteSize.X
+	local defaultSidebarWidth = 215
 	local initialMouseX, initialSidebarWidth
 	local snapRange = 20
-	local minSidebarWidth = 165
-	local maxSidebarWidth = 165
+	local minSidebarWidth = 215
+	local maxSidebarWidth = 500
 	local TweenSettings = {
 		DefaultTransparency = 0.9,
 		HoverTransparency = 0.85,
