@@ -103,15 +103,29 @@ function MacLib:Window(Settings)
 	notificationsUIPadding.PaddingTop = UDim.new(0, 10)
 	notificationsUIPadding.Parent = notifications
 
-	local base = Instance.new("Frame")
-	base.Name = "Base"
-	base.AnchorPoint = Vector2.new(0.5, 0.5)
-	base.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-	base.BackgroundTransparency = Settings.AcrylicBlur and 0.05 or 0
-	base.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	base.BorderSizePixel = 0
-	base.Position = UDim2.fromScale(0.5, 0.5)
-	base.Size = Settings.Size or UDim2.fromOffset(868, 650)
+    local base = Instance.new("Frame")
+    base.Name = "Base"
+    base.AnchorPoint = Vector2.new(0.5, 0.5)
+    base.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+    base.BackgroundTransparency = Settings.AcrylicBlur and 0.05 or 0
+    base.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    base.BorderSizePixel = 0
+    base.Position = UDim2.fromScale(0.5, 0.5)
+    base.Size = Settings.Size or UDim2.fromOffset(868, 650)
+
+-- Add glow effect to the back of the base frame
+    local glowEffect = Instance.new("ImageLabel", base)
+    glowEffect.Name = "GlowEffect"
+    glowEffect.Size = UDim2.new(0, 470, 0, 457)
+    glowEffect.Position = UDim2.new(0.5, -235, 0.5, -230)
+    glowEffect.BackgroundTransparency = 1
+    glowEffect.Image = "rbxassetid://6015897843"
+    glowEffect.ImageColor3 = Color3.fromRGB(245, 169, 188)
+    glowEffect.ImageTransparency = 1
+    glowEffect.ScaleType = Enum.ScaleType.Slice
+    glowEffect.SliceCenter = Rect.new(10, 10, 118, 118)
+    glowEffect.ZIndex = 0
+
 
 	local baseUIScale = Instance.new("UIScale")
 	baseUIScale.Name = "BaseUIScale"
@@ -679,7 +693,7 @@ function MacLib:Window(Settings)
 	dividerInteract.MouseButton1Down:Connect(function()
 		resizingContent = true
 		initialMouseX = UserInputService:GetMouseLocation().X
-		initialSidebarWidth = 215
+		initialSidebarWidth = 165
 	end)
 
 	UserInputService.InputEnded:Connect(function(input)
