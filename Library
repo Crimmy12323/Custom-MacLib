@@ -594,7 +594,7 @@ function MacLib:Window(Settings)
 
 	local sidebarGroupUIPadding = Instance.new("UIPadding")
 	sidebarGroupUIPadding.Name = "SidebarGroupUIPadding"
-	sidebarGroupUIPadding.PaddingLeft = UDim.new(0, 70)
+	sidebarGroupUIPadding.PaddingLeft = UDim.new(0, 10)
 	sidebarGroupUIPadding.PaddingRight = UDim.new(0, 10)
 	sidebarGroupUIPadding.PaddingTop = UDim.new(0, 31)
 	sidebarGroupUIPadding.Parent = sidebarGroup
@@ -648,7 +648,7 @@ function MacLib:Window(Settings)
 	content.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	content.BorderSizePixel = 0
 	content.Position = UDim2.fromScale(1, 4.69e-08)
-	content.Size = UDim2.new(0, (base.AbsoluteSize.X - sidebar.AbsoluteSize.X), 1, 0)
+	content.Size = UDim2.new(0, (base.AbsoluteSize.X - sidebar.AbsoluteSize.X), 0.3, 0)
 
 	local resizingContent = false
 	local defaultSidebarWidth = sidebar.AbsoluteSize.X
