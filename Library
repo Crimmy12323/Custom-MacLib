@@ -654,8 +654,8 @@ function MacLib:Window(Settings)
 	local defaultSidebarWidth = sidebar.AbsoluteSize.X
 	local initialMouseX, initialSidebarWidth
 	local snapRange = 20
-	local minSidebarWidth = 115
-	local maxSidebarWidth = 115
+	local minSidebarWidth = 165
+	local maxSidebarWidth = 165
 	local TweenSettings = {
 		DefaultTransparency = 0.9,
 		HoverTransparency = 0.85,
@@ -679,7 +679,7 @@ function MacLib:Window(Settings)
 	dividerInteract.MouseButton1Down:Connect(function()
 		resizingContent = true
 		initialMouseX = UserInputService:GetMouseLocation().X
-		initialSidebarWidth = 115
+		initialSidebarWidth = 165
 	end)
 
 	UserInputService.InputEnded:Connect(function(input)
