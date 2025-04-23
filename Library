@@ -130,8 +130,6 @@ function MacLib:Window(Settings)
 	baseUIStroke.Transparency = 0.9
 	baseUIStroke.Parent = base
 
-	local defaultSidebarWidth = 215 -- Define this before using it
-
 	local sidebar = Instance.new("Frame")
 	sidebar.Name = "Sidebar"
 	sidebar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -139,7 +137,7 @@ function MacLib:Window(Settings)
 	sidebar.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	sidebar.BorderSizePixel = 0
 	sidebar.Position = UDim2.fromScale(-3.52e-08, 4.69e-08)
-	sidebar.Size = UDim2.new(0, defaultSidebarWidth, 1, 0) -- Use the default width here
+	sidebar.Size = UDim2.fromScale(0.325, 1)
 
 	local divider = Instance.new("Frame")
 	divider.Name = "Divider"
@@ -656,11 +654,11 @@ function MacLib:Window(Settings)
 	local resizingContent = false
 	local defaultSidebarWidth = 215
 	local initialMouseX, initialSidebarWidth
-	local snapRange = 20
+	local snapRange = 200
 	local minSidebarWidth = 215
 	local maxSidebarWidth = 500
 	local TweenSettings = {
-		DefaultTransparency = 0.9,
+		DefaultTransparency = 0.8,
 		HoverTransparency = 0.85,
 
 		EasingStyle = Enum.EasingStyle.Sine
