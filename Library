@@ -130,6 +130,8 @@ function MacLib:Window(Settings)
 	baseUIStroke.Transparency = 0.9
 	baseUIStroke.Parent = base
 
+	local defaultSidebarWidth = 215 -- Define this before using it
+
 	local sidebar = Instance.new("Frame")
 	sidebar.Name = "Sidebar"
 	sidebar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -137,8 +139,8 @@ function MacLib:Window(Settings)
 	sidebar.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	sidebar.BorderSizePixel = 0
 	sidebar.Position = UDim2.fromScale(-3.52e-08, 4.69e-08)
-	sidebar.Size = UDim2.new(0, defaultSidebarWidth, 1, 0) -- Set the default width here
-	
+	sidebar.Size = UDim2.new(0, defaultSidebarWidth, 1, 0) -- Use the default width here
+
 	local divider = Instance.new("Frame")
 	divider.Name = "Divider"
 	divider.AnchorPoint = Vector2.new(1, 0)
